@@ -12,10 +12,14 @@ class Pedido: NSObject, NSCoding{
     var nome: String!
     var endereco: String!
     var telefone: String!
+
+    
+    
     var produtos: Array<Produto>!
     
     override init(){
         self.produtos = Array<Produto>()
+        
     }
     
     required init?(coder aDecoder: NSCoder){

@@ -14,9 +14,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var pedido: Pedido!
-
+    var historico: Pedido!
+    
+    func arquivo() -> String{
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
+        return "\(path)/historico"
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let obj = NSKeyedUnarchiver.unarchiveObject(withFile: self.arquivo())
+        
+        if (obj == nil){
+            self.historico = Pedido()
+        }else{
+            self.historico = obj as! Pedido
+        }
+        
         self.pedido = Pedido()
         return true
     }
@@ -29,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
