@@ -11,6 +11,7 @@ import Foundation
 class Produto: NSObject{
     var nome: String!
     var preco: Double!
+    var qtd: Int!
     
     override var description: String{
         return self.nome + " -> R$: " + String(self.preco)

@@ -8,16 +8,22 @@
 
 import Foundation
 
-class Pedido: NSObject{
+class Pedido: NSObject, NSCoder{
     var nome: String!
     var endereco: String!
-    var telefone: Int!
+    var telefone: String!
     var produtos: Array<Produto>!
-    
     
     override init(){
         self.produtos = Array<Produto>()
     }
     
- 
+    required init?(coder aDecoder: NSCoder){
+        self.produtos = aDecoder.decodeObject(forKey: "produtos") as! Array<Produto>
+    }
+    
+    func encode(with aCoder: NSCoder){
+        aCoder.encode(self.produtos, forKey: "pedidos")
+    }
+    
 }

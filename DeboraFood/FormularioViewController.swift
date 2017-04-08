@@ -10,9 +10,12 @@ import UIKit
 
 class FormularioViewController: UIViewController {
 
+    @IBOutlet weak var lbProduto: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let ad = UIApplication.shared.delegate as! AppDelegate
+        self.lbProduto.text = ad.pedido?.produtos[0].nome
         // Do any additional setup after loading the view, typically from a nib.
     }
 
