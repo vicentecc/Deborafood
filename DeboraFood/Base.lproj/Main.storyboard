@@ -33,7 +33,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Produtos" id="CLu-M5-z9c">
-                        <barButtonItem key="rightBarButtonItem" title="Finalizar Pedido" id="Xvd-g8-tsK">
+                        <barButtonItem key="leftBarButtonItem" title="Carinho" id="lCS-Ub-jnq">
+                            <connections>
+                                <segue destination="33w-vc-lgB" kind="show" id="wrK-jb-B4o"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Xvd-g8-tsK">
+                            <color key="tintColor" red="1" green="0.51499644320000004" blue="0.1893615776" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="yZ2-AS-XgE" kind="show" identifier="formularioPedido" id="JiP-Ow-C5B"/>
                             </connections>
@@ -44,10 +50,38 @@
             </objects>
             <point key="canvasLocation" x="1173.75" y="44.366197183098592"/>
         </scene>
-        <!--Formulario View Controller-->
+        <!--Meu Carrinho-->
+        <scene sceneID="OEY-fI-7Hh">
+            <objects>
+                <tableViewController title="Meu Carrinho" id="33w-vc-lgB" customClass="CarrinhoTableViewController" customModule="DeboraFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MPZ-R9-jSU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="carrinho" id="64Q-yf-CDY">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="64Q-yf-CDY" id="2AH-Nx-T5A">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="33w-vc-lgB" id="PSR-RK-Eiz"/>
+                            <outlet property="delegate" destination="33w-vc-lgB" id="W2O-2z-yQ1"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idA-4w-Let" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="907"/>
+        </scene>
+        <!--Finalizar Pedido-->
         <scene sceneID="S8g-XO-qSX">
             <objects>
-                <viewController id="yZ2-AS-XgE" customClass="FormularioViewController" customModule="DeboraFood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Finalizar Pedido" id="yZ2-AS-XgE" customClass="FormularioViewController" customModule="DeboraFood" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e9S-y6-0Ki"/>
                         <viewControllerLayoutGuide type="bottom" id="HWf-vf-ynw"/>
@@ -57,34 +91,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEt-kp-P7X">
-                                <rect key="frame" x="137" y="525" width="36" height="30"/>
+                                <rect key="frame" x="51" y="518" width="219" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pedir"/>
+                                <color key="backgroundColor" red="1" green="0.51499644320000004" blue="0.1893615776" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pedir">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finalizar Pedido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyP-Fr-YWZ">
-                                <rect key="frame" x="100" y="103" width="121" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total do Pedido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyP-Fr-YWZ">
+                                <rect key="frame" x="81" y="159" width="175" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="produto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mp-up-hFn">
-                                <rect key="frame" x="125" y="207" width="61" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOl-U3-PNI">
+                                <rect key="frame" x="102" y="235" width="117" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="lbProduto" destination="5mp-up-hFn" id="SMb-Za-JgX"/>
+                        <outlet property="lbTotal" destination="MOl-U3-PNI" id="DQz-ff-Ns0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7F-Kr-a9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2119" y="44"/>
+            <point key="canvasLocation" x="2118.75" y="43.309859154929576"/>
         </scene>
         <!--Produto View Controller-->
         <scene sceneID="FdB-qw-fD4">

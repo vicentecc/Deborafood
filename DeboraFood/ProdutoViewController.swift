@@ -41,7 +41,7 @@ class ProdutoViewController: UIViewController {
     @IBAction func addAoPedido(_ sender: Any) {
         produto.qtd = Int(stQtd.value)
         ad.pedido.produtos.append(produto)
-        
+        self.navigationController?.popViewController(animated: true)
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,7 +14,12 @@ class Produto: NSObject{
     var qtd: Int!
     
     override var description: String{
-        return self.nome + " -> R$: " + String(self.preco)
+        return self.nome + " --------> R$: " + String(self.preco)
+    }
+    
+    var descriptionCarrinho: String{
+        var total: Double = self.preco * Double(self.qtd)
+        return String(self.qtd) + " | " + self.nome + " -------- " + "R$" + String(total)
     }
     
     init(nome:String, preco:Double) {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Pedido: NSObject, NSCoder{
+class Pedido: NSObject, NSCoding{
     var nome: String!
     var endereco: String!
     var telefone: String!

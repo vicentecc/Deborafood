@@ -1,30 +1,25 @@
 //
-//  ListarTableViewController.swift
+//  PedidoTableViewController.swift
 //  DeboraFood
 //
-//  Created by admin on 07/04/17.
+//  Created by admin on 08/04/17.
 //  Copyright © 2017 admin. All rights reserved.
 //
 
 import UIKit
 
-class ListarTableViewController: UITableViewController {
+class CarrinhoTableViewController: UITableViewController {
     
-    var lista = Array<Produto>()
-    var paoPizza = Produto(nome:"Pão pizza", preco:4)
-    var coxinha = Produto(nome:"Coxinha", preco:1)
-    var coxao = Produto(nome:"Coxão", preco:5)
-    var refri = Produto(nome:"Cola Cola", preco:2)
+    let ad = UIApplication.shared.delegate as! AppDelegate
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
 
-        lista.append(paoPizza)
-        lista.append(coxinha)
-        lista.append(coxao)
-        lista.append(refri)
-   
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,19 +36,18 @@ class ListarTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.lista.count
+        return self.ad.pedido.produtos.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "carrinho", for: indexPath)
+        
         // Configure the cell...
         
-        cell.textLabel?.text = self.lista[indexPath.row].description
-        
-        
-        
+        cell.textLabel?.text = self.ad.pedido.produtos[indexPath.row].descriptionCarrinho
+
         return cell
     }
     
@@ -66,17 +60,16 @@ class ListarTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            self.ad.pedido.produtos.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
+   
 
     /*
     // Override to support rearranging the table view.
@@ -103,15 +96,9 @@ class ListarTableViewController: UITableViewController {
     }
     */
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sb = UIStoryboard (name: "Main", bundle: nil)
-        let fvc = sb.instantiateViewController(withIdentifier: "formularioProduto") as! ProdutoViewController
-        fvc.produto = lista[indexPath.row]
-        self.navigationController?.pushViewController(fvc, animated: true)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.tableView.reloadData()
     }
+
 }
