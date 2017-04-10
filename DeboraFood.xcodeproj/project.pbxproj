@@ -10,7 +10,6 @@
 		84BEF9941E97FF79004A43BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BEF9931E97FF79004A43BA /* AppDelegate.swift */; };
 		84BEF9961E97FF79004A43BA /* FormularioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BEF9951E97FF79004A43BA /* FormularioViewController.swift */; };
 		84BEF9991E97FF79004A43BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BEF9971E97FF79004A43BA /* Main.storyboard */; };
-		84BEF99C1E97FF79004A43BA /* DeboraFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84BEF99A1E97FF79004A43BA /* DeboraFood.xcdatamodeld */; };
 		84BEF99E1E97FF79004A43BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BEF99D1E97FF79004A43BA /* Assets.xcassets */; };
 		84BEF9A11E97FF79004A43BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BEF99F1E97FF79004A43BA /* LaunchScreen.storyboard */; };
 		84BEF9AC1E9806E7004A43BA /* ListarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BEF9AB1E9806E7004A43BA /* ListarTableViewController.swift */; };
@@ -19,6 +18,9 @@
 		84BEF9B21E981B3A004A43BA /* ProdutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BEF9B11E981B3A004A43BA /* ProdutoViewController.swift */; };
 		84CF0CA11E991426009DA710 /* PedidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0CA01E991426009DA710 /* PedidoViewController.swift */; };
 		84CF0CA31E992BD7009DA710 /* CarinhoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0CA21E992BD7009DA710 /* CarinhoTableViewController.swift */; };
+		84CF0CAA1E996F0F009DA710 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0CA81E996F0F009DA710 /* Model.xcdatamodeld */; };
+		84EC92901E9BEF0C00A1F0ED /* Historico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC928F1E9BEF0C00A1F0ED /* Historico.swift */; };
+		84EC92921E9BF92A00A1F0ED /* HistoricoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC92911E9BF92A00A1F0ED /* HistoricoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +28,6 @@
 		84BEF9931E97FF79004A43BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BEF9951E97FF79004A43BA /* FormularioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioViewController.swift; sourceTree = "<group>"; };
 		84BEF9981E97FF79004A43BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		84BEF99B1E97FF79004A43BA /* DeboraFood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeboraFood.xcdatamodel; sourceTree = "<group>"; };
 		84BEF99D1E97FF79004A43BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84BEF9A01E97FF79004A43BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84BEF9A21E97FF79004A43BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +37,9 @@
 		84BEF9B11E981B3A004A43BA /* ProdutoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutoViewController.swift; sourceTree = "<group>"; };
 		84CF0CA01E991426009DA710 /* PedidoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoViewController.swift; sourceTree = "<group>"; };
 		84CF0CA21E992BD7009DA710 /* CarinhoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarinhoTableViewController.swift; sourceTree = "<group>"; };
+		84CF0CA91E996F0F009DA710 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		84EC928F1E9BEF0C00A1F0ED /* Historico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Historico.swift; sourceTree = "<group>"; };
+		84EC92911E9BF92A00A1F0ED /* HistoricoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +77,6 @@
 				84BEF9A81E97FFA6004A43BA /* Model */,
 				84BEF99D1E97FF79004A43BA /* Assets.xcassets */,
 				84BEF9A21E97FF79004A43BA /* Info.plist */,
-				84BEF99A1E97FF79004A43BA /* DeboraFood.xcdatamodeld */,
 			);
 			path = DeboraFood;
 			sourceTree = "<group>";
@@ -83,6 +86,8 @@
 			children = (
 				84BEF9AD1E980727004A43BA /* Pedido.swift */,
 				84BEF9AF1E980880004A43BA /* Produto.swift */,
+				84CF0CA81E996F0F009DA710 /* Model.xcdatamodeld */,
+				84EC928F1E9BEF0C00A1F0ED /* Historico.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 				84BEF9B11E981B3A004A43BA /* ProdutoViewController.swift */,
 				84CF0CA01E991426009DA710 /* PedidoViewController.swift */,
 				84CF0CA21E992BD7009DA710 /* CarinhoTableViewController.swift */,
+				84EC92911E9BF92A00A1F0ED /* HistoricoTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -187,8 +193,10 @@
 				84BEF9B01E980880004A43BA /* Produto.swift in Sources */,
 				84BEF9961E97FF79004A43BA /* FormularioViewController.swift in Sources */,
 				84CF0CA31E992BD7009DA710 /* CarinhoTableViewController.swift in Sources */,
+				84EC92921E9BF92A00A1F0ED /* HistoricoTableViewController.swift in Sources */,
+				84EC92901E9BEF0C00A1F0ED /* Historico.swift in Sources */,
 				84BEF9941E97FF79004A43BA /* AppDelegate.swift in Sources */,
-				84BEF99C1E97FF79004A43BA /* DeboraFood.xcdatamodeld in Sources */,
+				84CF0CAA1E996F0F009DA710 /* Model.xcdatamodeld in Sources */,
 				84BEF9AE1E980727004A43BA /* Pedido.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,13 +362,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		84BEF99A1E97FF79004A43BA /* DeboraFood.xcdatamodeld */ = {
+		84CF0CA81E996F0F009DA710 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				84BEF99B1E97FF79004A43BA /* DeboraFood.xcdatamodel */,
+				84CF0CA91E996F0F009DA710 /* Model.xcdatamodel */,
 			);
-			currentVersion = 84BEF99B1E97FF79004A43BA /* DeboraFood.xcdatamodel */;
-			path = DeboraFood.xcdatamodeld;
+			currentVersion = 84CF0CA91E996F0F009DA710 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -42,8 +42,10 @@ class FormularioViewController: UIViewController, MFMailComposeViewControllerDel
             self.showSendMailErrorAlert()
         }*/
         
+        
         //arquivo
-        //NSKeyedArchiver.archiveRootObject(self.ad.pedido, toFile: self.ad.arquivo())
+        //ad.historico.append(ad.pedido)
+        ad.historico.pedidos.append(ad.pedido)
             
     }
     /*
