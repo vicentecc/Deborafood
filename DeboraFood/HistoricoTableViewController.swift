@@ -44,7 +44,7 @@ class HistoricoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historico", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = self.ad.historico.pedidos[indexPath.row].nome
+        cell.textLabel?.text = self.ad.historico.pedidos[indexPath.row].descriptionHistorio
 
         return cell
     }
